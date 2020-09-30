@@ -19,7 +19,7 @@ def getcurrent():
     #configure link to call for API
     Link = cfg['URLS']['CW'].format(city = city)
     result = requests.get(Link)
-    #check if return error code
+    #check if City not found
     if result.status_code == 400:
         return ['Err']['400'], 400
     mas = json.loads(result.content)
@@ -33,6 +33,7 @@ def getweather():
     tst = request.args.get('dt')
     Link = cfg['URLS']['FC']
     result = requests.get(Link)
+    #check if City not found
     if result.status_code == 400:
         return ['Err']['400'], 400
     mas = json.loads(result.content)
