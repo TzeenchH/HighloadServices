@@ -9,9 +9,11 @@ app = Flask(__name__)
 #read configfile
 cfg = ConfigParser()
 cfg.read('configs.ini')
+#start page with info about options of requests
 @app.route('/')
 def home():
-    return 'for current weather'
+    print("for current weather print /v1/current/?city=yourCity \n for forecast print /v1/weather/?city=yourCity&dt=yourDate")
+    return "for current weather print /v1/current/?city=yourCity \n for forecast print /v1/weather/?city=yourCity&dt=yourDate"
 
 @app.route('/v1/current/')
 def getcurrent():
