@@ -25,7 +25,7 @@ def home():
 def getcurrent():
     city = request.args.get('city')
     #configure link to call for API
-    Link = cfg['URLS']['CW'].format(city = city)
+    Link = cfg['URLS']['CW'] + city
     result = requests.get(Link)
     #check if returns error code
     if result.status_code != 200:
@@ -39,7 +39,8 @@ def getcurrent():
 def getweather():
     city = request.args.get('city')
     tstp = request.args.get('dt')
-    Link = cfg['URLS']['FC']
+    Link = cfg['URLS']['FC'] + city + "&days=" + tstp
+    print(Link)	  
     result = requests.get(Link)
     #check if returns error code
     if result.status_code != 200:
