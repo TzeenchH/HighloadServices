@@ -12,14 +12,14 @@ import requests
 neededport = os.environ.get('SERV_PORT')
 
 app = Flask(__name__)
-#run server on specified port
-app.run(port=neededport)
+
 #read configfile
 cfg = ConfigParser()
 cfg.read('configs.ini')
+#default page with options description
 @app.route('/')
 def home():
-    return 'for current weather'
+    return 'For current weather use /v1/current/?city=YourCity \nFor weather to date use /v1/weather/?city=YourCity&dt=needed day'
 
 @app.route('/v1/current/')
 def getcurrent():
@@ -49,4 +49,5 @@ def getweather():
     forecasts_massive = mas['forecast']['forecastday']
     temp = forecasts_massive[int(tstp)-1]['day']['avgtemp_c']
     return json.dumps({"city": city, "unit": 'celsius', "temperature": temp })
-
+#run server on specified port
+app.run(host='127.0.0.1', port=int(neededport))
