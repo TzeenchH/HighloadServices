@@ -1,19 +1,25 @@
 from flask import Flask, request
+#Need to work with ConfigFile
 from configparser import ConfigParser
 
 import os
+#Need to load and parse incoming JSON`s
 import json
+#need to request for external API
 import requests
 
+#Get environmental variable with port-number
+neededport = os.environ.get('SERV_PORT')
+
 app = Flask(__name__)
+#run server on specified port
+app.run(port=neededport)
 #read configfile
 cfg = ConfigParser()
 cfg.read('configs.ini')
-#start page with info about options of requests
 @app.route('/')
 def home():
-    print("for current weather print /v1/current/?city=yourCity \n for forecast print /v1/weather/?city=yourCity&dt=yourDate")
-    return "for current weather print /v1/current/?city=yourCity \n for forecast print /v1/weather/?city=yourCity&dt=yourDate"
+    return 'for current weather'
 
 @app.route('/v1/current/')
 def getcurrent():
@@ -21,24 +27,26 @@ def getcurrent():
     #configure link to call for API
     Link = cfg['URLS']['CW'].format(city = city)
     result = requests.get(Link)
-    #check if City not found
-    if result.status_code == 400:
-        return ['Err']['400'], 400
-    mas = json.loads(result.content)
-    temp = mas['current']['temp_c']   
-    # returns current temperature for city
+    #check if returns error code
+    if result.status_code != 200:
+        return cfg['Err']['400'], 400
+    currweather = json.loads(result.content)
+    temp = currweather['current']['temp_c']   
+    # takes current temperature for city
     return json.dumps({"city": city, "unit": 'celsius', "temperature": temp })
 
 @app.route('/v1/weather/')
 def getweather():
     city = request.args.get('city')
-    tst = request.args.get('dt')
+    tstp = request.args.get('dt')
     Link = cfg['URLS']['FC']
     result = requests.get(Link)
-    #check if City not found
-    if result.status_code == 400:
-        return ['Err']['400'], 400
+    #check if returns error code
+    if result.status_code != 200:
+        return cfg['Err']['400'], 400
+    #configure paremeters of the returned file
     mas = json.loads(result.content)
+    forecasts_massive = mas['forecast']['forecastday']
+    temp = forecasts_massive[int(tstp)-1]['day']['avgtemp_c']
+    return json.dumps({"city": city, "unit": 'celsius', "temperature": temp })
 
-
-    
