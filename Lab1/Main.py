@@ -10,7 +10,8 @@ import requests
 
 #Get environmental variable with port-number
 neededport = os.environ.get('SERV_PORT')
-
+if neededport is None:
+    neededport = 5050
 app = Flask(__name__)
 
 #read configfile
@@ -51,4 +52,4 @@ def getweather():
     temp = forecasts_massive[int(tstp)-1]['day']['avgtemp_c']
     return json.dumps({"city": city, "unit": 'celsius', "temperature": temp })
 #run server on specified port
-app.run(host='127.0.0.1', port=int(neededport))
+app.run(host='0.0.0.0', port=int(neededport))

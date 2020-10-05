@@ -1,0 +1,7 @@
+{"log":" * Serving Flask app \"Main\" (lazy loading)\n","stream":"stdout","time":"2020-10-05T21:04:13.663281955Z"}
+{"log":" * Environment: production\n","stream":"stdout","time":"2020-10-05T21:04:13.66334259Z"}
+{"log":"   WARNING: This is a development server. Do not use it in a production deployment.\n","stream":"stdout","time":"2020-10-05T21:04:13.663347399Z"}
+{"log":"   Use a production WSGI server instead.\n","stream":"stdout","time":"2020-10-05T21:04:13.663352277Z"}
+{"log":" * Debug mode: off\n","stream":"stdout","time":"2020-10-05T21:04:13.663355644Z"}
+{"log":" * Running on http://0.0.0.0:5050/ (Press CTRL+C to quit)\n","stream":"stderr","time":"2020-10-05T21:04:13.663371654Z"}
+{"log":"172.17.0.1 - - [05/Oct/2020 21:05:17] \"\u001b[37mGET / HTTP/1.1\u001b[0m\" 200 -\n","stream":"stderr","time":"2020-10-05T21:05:17.359662078Z"}
