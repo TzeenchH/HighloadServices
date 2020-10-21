@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e+lV9s6Fp6lQtDixNWJdki6c/N87Hjupm2ZPS1FjmuwrDbmHeHIvNViDvnKqDjNC5i3dchP51Kn7ty9jZhTqRQ==",
+  "dgSpecHash": "Jhzq3MoLLjPfsTrX5vp3/ddHzTTM0B8cQ0ibuDA37j/EwbXPW0iztjcNge2DpIln3J0psEfSWrZvANpFhcxRVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\Lab4\\ServA\\ServA\\ServA.csproj",
+  "projectFilePath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\ServA\\ServA\\ServA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zenv9\\.nuget\\packages\\google.protobuf\\3.13.0\\google.protobuf.3.13.0.nupkg.sha512",
     "C:\\Users\\zenv9\\.nuget\\packages\\graphql\\3.0.0.2026\\graphql.3.0.0.2026.nupkg.sha512",

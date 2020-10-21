@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zenv9\\OneDrive\\Desktop\\Lab4\\ServA\\ServA\\ServA.csproj": {}
+    "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\ServA\\ServA\\ServA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zenv9\\OneDrive\\Desktop\\Lab4\\ServA\\ServA\\ServA.csproj": {
+    "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\ServA\\ServA\\ServA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zenv9\\OneDrive\\Desktop\\Lab4\\ServA\\ServA\\ServA.csproj",
+        "projectUniqueName": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\ServA\\ServA\\ServA.csproj",
         "projectName": "ServA",
-        "projectPath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\Lab4\\ServA\\ServA\\ServA.csproj",
+        "projectPath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\ServA\\ServA\\ServA.csproj",
         "packagesPath": "C:\\Users\\zenv9\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\Lab4\\ServA\\ServA\\obj\\",
+        "outputPath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\ServA\\ServA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zenv9\\AppData\\Roaming\\NuGet\\NuGet.Config",
