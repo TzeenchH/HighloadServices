@@ -7,11 +7,10 @@ import os
 import json
 #need to request for external API
 import requests
-
+CONST_NAME = "bad_request"
+bad_request = 400
 #Get environmental variable with port-number
-neededport = os.environ.get('SERV_PORT')
-if neededport is None:
-    neededport = 5050
+
 app = Flask(__name__)
 
 #read configfile
@@ -25,12 +24,14 @@ def home():
 @app.route('/v1/current/')
 def getcurrent():
     city = request.args.get('city')
+    if city is None:
+        return "Invalid call: city name is empty", bad_request
     #configure link to call for API
     Link = cfg['URLS']['CW'] + city
     result = requests.get(Link)
     #check if returns error code
     if result.status_code != 200:
-        return cfg['Err']['400'], 400
+        return "Whoops, something goes wrong", bad_request
     currweather = json.loads(result.content)
     temp = currweather['current']['temp_c']   
     # takes current temperature for city
@@ -40,16 +41,22 @@ def getcurrent():
 def getweather():
     city = request.args.get('city')
     tstp = request.args.get('dt')
+    if city is None | tstp is None:
+        return "Invalid call: city name is empty", bad_request
     Link = cfg['URLS']['FC'] + city + "&days=" + tstp
     print(Link)	  
     result = requests.get(Link)
     #check if returns error code
     if result.status_code != 200:
-        return cfg['Err']['400'], 400
+        return "Whoops, something goes wrong", bad_request
     #configure paremeters of the returned file
     mas = json.loads(result.content)
     forecasts_massive = mas['forecast']['forecastday']
     temp = forecasts_massive[int(tstp)-1]['day']['avgtemp_c']
     return json.dumps({"city": city, "unit": 'celsius', "temperature": temp })
 #run server on specified port
-app.run(host='0.0.0.0', port=int(neededport))
+if __name__ == "__main__":
+    neededport = os.environ.get('SERV_PORT')
+    if neededport is None:
+        neededport = 5050
+    app.run(host='0.0.0.0', port=int(neededport))
