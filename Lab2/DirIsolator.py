@@ -32,9 +32,6 @@ def _create_mounts(new_root):
 def run(memory, memory_swap, cpu_shares, user, image_name, image_dir,
         container_dir, command):
     container_id = str(uuid.uuid4())
-
-    # linux.clone(callback, flags, callback_args) is modeled after the Glibc
-    # version. see: "man 2 clone"
     flags = (linux.CLONE_NEWPID | linux.CLONE_NEWNS | linux.CLONE_NEWUTS |
              linux.CLONE_NEWNET)
     callback_args = (command, image_name, image_dir, container_id,
