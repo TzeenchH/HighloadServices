@@ -4,7 +4,7 @@ RUN apt update
 
 RUN apt install git -y
 
-Expose 5050
+EXPOSE 5050
 
 RUN apt install python3 -y
 
