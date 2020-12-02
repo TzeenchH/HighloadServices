@@ -1,2 +1,0 @@
-obj\Debug\netcoreapp3.1\Protos/PhoneValidator.cs \
-obj\Debug\netcoreapp3.1\Protos/PhoneValidatorGrpc.cs: Protos/PhoneValidator.proto
