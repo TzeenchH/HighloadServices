@@ -6,3 +6,13 @@
 * Сервис А принимает запросы GraphQL
 # Реализация
 Сервис А реализован на языке C# с использованием ASP.NET Core. Сервис B реализован на языке Python с использованием flask и flask_graphql
+# Пример запроса 
+```graphQL
+query VerifyPhone {
+  phone(number: "88005553535", code: 1) {
+    number
+    code
+    validationResult
+  }
+}
+```
