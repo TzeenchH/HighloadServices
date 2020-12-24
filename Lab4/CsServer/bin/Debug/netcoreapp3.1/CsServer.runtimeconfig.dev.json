@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\zenv9\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\zenv9\\.nuget\\packages"
+      "/root/.dotnet/store/|arch|/|tfm|",
+      "/root/.nuget/packages"
     ]
   }
 }

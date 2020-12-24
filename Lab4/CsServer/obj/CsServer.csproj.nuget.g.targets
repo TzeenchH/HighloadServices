@@ -4,7 +4,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)grpc.tools\2.27.0\build\Grpc.Tools.targets" Condition="Exists('$(NuGetPackageRoot)grpc.tools\2.27.0\build\Grpc.Tools.targets')" />
-    <Import Project="$(NuGetPackageRoot)google.protobuf.tools\3.14.0\build\Google.Protobuf.Tools.targets" Condition="Exists('$(NuGetPackageRoot)google.protobuf.tools\3.14.0\build\Google.Protobuf.Tools.targets')" />
+    <Import Project="$(NuGetPackageRoot)grpc.tools/2.27.0/build/Grpc.Tools.targets" Condition="Exists('$(NuGetPackageRoot)grpc.tools/2.27.0/build/Grpc.Tools.targets')" />
+    <Import Project="$(NuGetPackageRoot)google.protobuf.tools/3.14.0/build/Google.Protobuf.Tools.targets" Condition="Exists('$(NuGetPackageRoot)google.protobuf.tools/3.14.0/build/Google.Protobuf.Tools.targets')" />
   </ImportGroup>
 </Project>

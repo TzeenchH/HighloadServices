@@ -10,7 +10,7 @@ numb = random.randint(0, 100)
 print(numb)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-    sock.bind(("127.0.0.1", 5050))
+    sock.bind(("127.0.0.1", 5075))
     sock.listen(10)
     conn, addr = sock.accept()
     with conn:

@@ -745,30 +745,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zenv9\\.nuget\\packages\\": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\CsServer\\CsServer.csproj",
+      "projectUniqueName": "/home/administrator/HighloadServices/Lab4/CsServer/CsServer.csproj",
       "projectName": "CsServer",
-      "projectPath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\CsServer\\CsServer.csproj",
-      "packagesPath": "C:\\Users\\zenv9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zenv9\\OneDrive\\Desktop\\tmp\\HighloadServices\\Lab4\\CsServer\\obj\\",
+      "projectPath": "/home/administrator/HighloadServices/Lab4/CsServer/CsServer.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/home/administrator/HighloadServices/Lab4/CsServer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zenv9\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -780,6 +779,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Google.Protobuf": {
             "target": "Package",
@@ -808,6 +808,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.8, 3.1.8]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[3.1.9, 3.1.9]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -816,7 +830,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -72,5 +72,5 @@ def getweather():
 if __name__ == "__main__":
     neededport = os.environ.get("SERV_PORT")
     if neededport is None:
-        neededport = 5050
+        neededport = 5080
     app.run(host="0.0.0.0", port=int(neededport))
